@@ -1,0 +1,391 @@
+/*stylesheet for blog page*/
+
+/*navigation bar styling- for both mobile and desktop*/
+
+/*styling of all a links*/
+a{
+  text-decoration: none;
+}
+/*this will affect all images, but since the colors are white for ad and social media-doesn't matter*/
+img {
+  filter: saturate(2);
+}
+
+/*styling of header*/
+.site-nav {
+  background-color: #033048;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1em 0.5em;
+  color: white;
+}
+
+/*---mobile design---*/
+/*remove bullets from navigation links*/
+ul {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  list-style: none;
+}
+
+nav ul.opening {
+  display: block;
+}
+
+
+nav a {
+    display: block;
+    font-size: 20px;
+    color: #f9e42e;
+    text-decoration: none;
+}
+
+nav a:hover {
+  color: #9aacb5;
+}
+
+.logo {
+  /*display: flex;
+  align-items: flex-start;
+  justify-content: center;*/
+  font-size: 50px;
+  font-weight: bold;
+  margin-left: 2em;
+  padding-top: 15px;
+}
+
+.site-nav--icon {
+  font-size: 1.4em;
+  margin-right: 1em;
+  width: 1.1em;
+  text-align: right;
+  color: rgba(255,255,255,.4);
+}
+
+.menu-toggle {
+  position: absolute;
+  padding: 0.8em;
+  top: 2.5em;
+  right: .5em;
+  cursor: pointer;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+  content: '';
+  display: block;
+  background: #EBEBD3;
+  height: 3px;
+  width: 2em;
+  border-radius: 3px;
+  transition: all ease-in-out 350ms;
+}
+
+.hamburger::before {
+  transform: translateY(-7px);
+}
+
+.hamburger::after {
+  transform: translateY(4px);
+}
+
+.menu .hamburger {
+  transform: rotate(45deg);
+}
+
+.menu .hamburger::before {
+  display: none;
+}
+
+.menu .hamburger::after {
+  transform: translateY(-1px) rotate(-90deg);
+}
+
+
+
+
+
+/*mobile first media query to change desktop settings*/
+/*---desktop breakpoint is 780px----*/
+@media (min-width: 780px) {
+
+.menu-toggle {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 100px;
+  padding-top: 10px;
+}
+
+nav li {
+    padding: 10px 1.3em;
+}
+
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #033048;
+}
+}
+
+/*-------------------------------------------*/
+@media (max-width: 780px) {
+
+  nav a {
+    font-size: 30px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #033048;
+  }
+
+  nav li{
+      line-height: 60px;
+      padding-left: 60px;
+  }
+
+
+}
+
+
+/*columns for main text styling*/
+
+/*article is all the content between the header and footer*/
+article {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0efef;
+  color: #3b444c;
+  height: 100em;
+  display: flex;
+  align-items: flex-start;;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 5% 10%;
+}
+
+/*blog title styling*/
+.blog-title {
+  font-size: 2.5em;
+  color: #033048;
+}
+
+.firstcharacter {
+  float: left;
+  font-weight: 500;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
+/*column 1 is the main content column with blog posts*/
+.column1 {
+  width: 60%;
+  padding: 0;
+  margin: 0;
+}
+
+
+/*blog listing 1 image*/
+.column1 img {
+ width: 100%;
+}
+
+/*blog listing 1 text*/
+.column1 p {
+  font-size: 1.5em;
+  font-weight: lighter;
+  line-height: 35px;
+}
+
+
+/*column 2 is the annoying column on the right that no one likes bs it feels like ad space*/
+
+.column2 {
+  width: 30%;
+}
+
+.column2-list {
+  color: #033048;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0;
+  font-size: 1.5em;
+  font-weight: 100;
+  line-height: 1.3em;
+}
+
+/*links in column 2*/
+.column2-list a {
+    color: #033048;
+}
+
+.column2-list a:hover {
+   color: #f9e42e;
+}
+
+/*headers in column 2*/
+.column2 h3 {
+  color: #033048;
+  font-size: 1.75em;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+.column2 p {
+  color: #033048;
+  font-size: 1.4em;
+  font-weight: lighter;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+/*reveal the text when you click on learn more*/
+p.reveal {
+  background-color: #ccd5da;
+  border: 2px #033048 solid;
+  border-radius: 10px;
+  display: none;
+  font-size: 15px;
+  margin: .5em 0;
+  padding: 10px;
+  width: 150px;
+}
+
+.more-tag1 {
+  display: none;
+}
+
+.more-tag2 {
+  display: none;
+}
+
+
+#learning a {
+  color: #033048;
+}
+
+#learning a:hover{
+  color: #f9e42e;
+}
+
+/*blog listing read more arrow link*/
+.next-tag {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.next-tag a {
+  color: #033048;
+  text-decoration: none;
+}
+
+.next-tag a:hover {
+  color: 	#f9e42e;
+}
+
+
+
+/*footer area*/
+.last_button_section {
+    background-color: #f9e42e;
+    height: 100px;
+}
+
+.final_button {
+  background-color: #f9e42e;
+  text-align: center;
+}
+
+/*sign up now button*/
+.sign_up_now {
+  background-color: #033048;
+  border-color: #033048;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  height: 40px;
+  margin: 30px;
+  width: 160px;
+}
+
+.sign_up_now:hover {
+  background-color: #9aacb5;
+  border-color: #9aacb5;
+  color: #033048;
+}
+
+
+.contact_info {
+  background-color: #121212;
+  color: white;
+  height: 300px;
+  text-align: center;
+}
+
+.relaxr_logo_yellow {
+  color: #f9e42e;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  margin-top: 0;
+  padding: 50px;
+  text-transform: capitalize;
+}
+
+.social_media_buttons {
+  margin: 0;
+  text-align: center;
+}
+
+
+.twitter {
+    display: inline;
+    padding-right: 1%;
+    width: 30px;
+}
+
+.fb {
+  display: inline-block;
+  margin-top: 0;
+  padding-left: 1%;
+  width: 30px;
+}
+
+.twitter img, .fb img {
+  height: 30px;
+}
+
+
+.copyright {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  padding-top: 30px;
+}
+
+/*ad space as white photo*/
+ .ad_photo {
+   padding-top: 50px;
+   position: sticky;
+ }
