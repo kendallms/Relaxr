@@ -342,40 +342,39 @@ p.reveal {
   background-color: #121212;
   color: white;
   height: 300px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .relaxr_logo_yellow {
   color: #f9e42e;
   font-family: 'Open Sans', sans-serif;
   font-size: 35px;
-  margin-top: 0;
-  padding: 50px;
+  margin-top: 40px;
   text-transform: capitalize;
 }
 
 .social_media_buttons {
-  margin: 0;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
 }
 
 
-.twitter {
-    display: inline;
-    padding-right: 1%;
-    width: 30px;
+.twitter img, .fb img, .github img {
+    height: 35px;
 }
 
-.fb {
-  display: inline-block;
-  margin-top: 0;
-  padding-left: 1%;
-  width: 30px;
+/* .fb {
+ height: 30px;
 }
 
-.twitter img, .fb img {
+.github {
   height: 30px;
-}
+} */
 
 
 .copyright {
